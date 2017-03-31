@@ -28,13 +28,9 @@ function pickRankC() {
 
 }
 
-
 function randPhonemeC() {
-    var arrElemC = rankC[Math.ceil(Math.random() * rankC.length)];
-    ;
- document.write(arrElemC);
+    var arrElemC = [Math.ceil(Math.random() * rankC.length)];
+
+
 }
-
-
-
 
