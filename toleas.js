@@ -29,8 +29,40 @@ function pickRankC() {
 }
 
 function randPhonemeC() {
-    var arrElemC = [Math.ceil(Math.random() * rankC.length)];
+    var rC = pickRankC();
+    var arrElemC = Math.ceil(Math.random() * rC.length);
+    var phonemeC = rankC[arrElemC];
+    return phonemeC;
+}
 
+//VOWEL CHOOSING PROCESS
+var rankOneV = ["he", "&iacute", "e", "u"];
+var rankTwoV = ["&iuml", "hi", "o", "ha", "&euml"];
+var rankThreeV = ["&uuml", "&ouml", "ho", "&auml", "a", "hu"];
+
+var rankV;
+
+function pickRankV() {
+    var RandRankV = Math.floor((Math.random() * 6));
+    if (RandRankV == 1 || RandRankV == 2 || RandRankV == 3) {
+        rankV = rankOneV;
+    }
+    else if (RandRankV == 4 || RandRankV == 5) {
+        rankV = rankTwoV;
+    }
+    else {
+        rankV = rankThreeV;
+    }
+
+    return rankV;
 
 }
 
+
+function randPhonemeV() {
+    var arrV = pickRankV();
+    var arrElemV = Math.ceil(Math.random() * arrV.length);
+    var phonemeV = rankV[arrElemV];
+    return phonemeV;
+    ;
+}
