@@ -43,7 +43,7 @@ var rankThreeV = ["&uuml", "&ouml", "ho", "&auml", "a", "hu"];
 var rankV;
 
 function pickRankV() {
-    var RandRankV = Math.floor((Math.random() * 6));
+    var RandRankV = Math.ceil((Math.random() * 6));
     if (RandRankV == 1 || RandRankV == 2 || RandRankV == 3) {
         rankV = rankOneV;
     }
@@ -66,3 +66,37 @@ function randPhonemeV() {
     return phonemeV;
     ;
 }
+
+
+
+//syllable assembly
+
+function vowCon() {
+    var phoC = randPhonemeC();
+    var vowelFirst = randPhonemeV();
+    var sylVC = vowelFirst.concat(phoC);
+    return sylVC;
+}
+
+
+
+//word assembly
+function vowelStart() {
+    var starter = 0;
+    return starter;
+}
+function consoStart() {
+    var starter = 1;
+    return starter;
+}
+/**
+function assemble(vowel, consonant, length, startPho) {
+    var word = "";
+
+    if (startPho == 0) //startPho is a vowel
+        for (i = 0; i = length; i++) { //length
+            randPhonemeV
+the program wuldnt let me have an unfinished funciton
+**/
+
+
