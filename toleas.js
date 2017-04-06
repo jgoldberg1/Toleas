@@ -29,8 +29,9 @@ function pickRankC() {
 }
 
 function randPhonemeC() {
-    var rC = pickRankC();
-    var arrElemC = Math.ceil(Math.random() * rC.length);
+    var arrC = pickRankC();
+    var lengthC = arrC.length - 1;
+    var arrElemC = Math.ceil(Math.random() * lengthC);
     var phonemeC = rankC[arrElemC];
     return phonemeC;
 }
@@ -61,10 +62,11 @@ function pickRankV() {
 
 function randPhonemeV() {
     var arrV = pickRankV();
-    var arrElemV = Math.ceil(Math.random() * arrV.length);
+    var lengthV = arrV.length - 1;
+    var arrElemV = Math.ceil(Math.random() * lengthV);
     var phonemeV = rankV[arrElemV];
     return phonemeV;
-    ;
+
 }
 
 
@@ -72,31 +74,41 @@ function randPhonemeV() {
 //syllable assembly
 
 function vowCon() {
-    var phoC = randPhonemeC();
-    var vowelFirst = randPhonemeV();
-    var sylVC = vowelFirst.concat(phoC);
+    var sylVC = randPhonemeV() + randPhonemeC();
     return sylVC;
+    console.log(sylVC);
 }
 
+function conVow() {
+    var sylCV = randphonemeC() + randPhonemeV();
+    return sylCV;
+}
 
 
 //word assembly
 function vowelStart() {
     var starter = 0;
+    console.log(starter);
     return starter;
 }
 function consoStart() {
     var starter = 1;
+    console.log(starter);
     return starter;
 }
-/**
-function assemble(vowel, consonant, length, startPho) {
+function assemble() {
     var word = "";
-
+    var startPho = 0;
     if (startPho == 0) //startPho is a vowel
-        for (i = 0; i = length; i++) { //length
-            randPhonemeV
-the program wuldnt let me have an unfinished funciton
-**/
+        for (i = 0; i <= 2; i++) { //length
+            var syll = vowCon();
+            document.write(syll);
+            console.log(syll);
+        }
+}
+
+function createWord(){
+    document.getElementById("output").innerHTML = "Change this";
+}
 
 
